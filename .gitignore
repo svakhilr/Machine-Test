@@ -4,3 +4,4 @@ __pycache__
 myenv  
 .env
 /static  
+scrap.txt

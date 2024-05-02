@@ -48,9 +48,9 @@ class Vendor(models.Model):
     @property
     def fullfillment_rate(self):
         from orders.models import PurchaseOrder
-        order_count = self.order.alcompleted_l().count()
+        order_count = self.order.all().count()
         completed_order_count = self.order.filter(order_status=PurchaseOrder.COMPLETED).count()
-
+        
         return round((completed_order_count/order_count)*100) 
 
 
